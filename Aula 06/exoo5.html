@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+
+    <style>
+        body {
+            background-color: rgba(34, 33, 33, 0.76);
+            color: aliceblue;
+            font: normal 18pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div id="msg">Clique em Mim</div>
+
+        <script>
+            // var corpo = window.document.body
+            // var p1 = window.document.getElementsByTagName('p')[1]
+            // window.document.write('está escrito assim: ' + p1.innerText)
+            // p1.style.color = 'blue'
+            // corpo.style.background = 'black'
+            // document.write(p1.innerText)  ---> Pegando elementos por Marcas no html
+
+            // var d = window.document.getElementsByName('msg') [0]
+            // d.innerText = 'Olá'
+
+            var d = window.document.querySelector('div#msg')
+            d.style.background = 'blue'
+
+
+        </script>
+</body>
+</html>
