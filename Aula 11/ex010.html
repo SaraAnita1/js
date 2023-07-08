@@ -8,19 +8,19 @@
 <body>
     <h1>Sistema de Multas</h1>
     Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
-    <input type="button" value="Verificar" onclick="calcular()">
-    <div id="res">
+    <input type="button" value="Verificar" onclick="calcular()"> //declarei a função 
+    <div id="resultado"> // manter os ID semanticos ou obvios pra ajudar a entender
 
     </div>
     <script>
         
 
         function calcular() {
-            var txtv = document.querySelector('input#txtvel')
-            var vel = Number(txtv.value)
-            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
-            if (vel > 60) {
-                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!`
+            var txtv = document.querySelector('input#txtvel') // indiquei a variavel que eu peguei no texto peguei pelo id
+            var vel = Number(txtv.value) // transformei a string em numero
+            resultado.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>` // coloqei a informação na tela
+            if (vel > 60) { // coloquei as condições 
+                resultado.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!` // informei o que aparecer na div que deixei vazia 
             }
             res.innerHTML += '<p>Dirija sempre com cinto de segurança!</p>'
         }

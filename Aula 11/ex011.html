@@ -7,7 +7,32 @@
 </head>
 <body>
     <h1>Nacionalidade</h1>
-    Insira Aqui a sua Nacionalidade: <input type="text">
+
+  <form onsubmit = verificar()>
+    Insira Aqui a sua Nacionalidade: <input type="text" name="nacionalidade" id="nacionalidade" list="listaNacionalidade" required>
+    <datalist id="listaNacionalidade">
+        <option value="Americano">
+        <option value="Mexicano">
+        <option value="Canadense">
+    </datalist>
+    <input type="submit" value="Enviar">
+  </form>
+    <div id="resposta">
+
+    </div>
+    <script>
+
+        function verificar(){
+            event.preventDefault()
+            const nacional = document.querySelector('input#nacionalidade').value
+            if (nacional.toLowerCase() === "brasileiro") {
+                document.querySelector('#resposta').innerHTML = 'Parece que você é um autentico hueBR'
+            } else {
+                document.querySelector('#resposta').innerHTML = 'Então e.e Você é Gringo'
+            }
+        }
+
+    </script>
     
 </body>
 </html>
