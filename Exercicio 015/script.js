@@ -50,7 +50,7 @@ function verificar() {
         res.innerHTML = `Detectamos ${gênero} com ${idade} anos.'`
         img.style.width = '250px'
         img.style.height = '250px'
-        
+        img.style.objectFit = 'cover'
         res.appendChild(img)
     }
 }
